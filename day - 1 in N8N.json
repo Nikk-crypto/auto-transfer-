@@ -1,0 +1,264 @@
+{
+  "name": "day - 1 in N8N",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "BASIC INFO FORM ",
+        "formDescription": "PRACTICE PURPOSE ",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "YOUR NAME ",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "DATE OF BIRTH ",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "GMAIL ",
+              "fieldType": "email",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "SEX ",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "MALE "
+                  },
+                  {
+                    "option": "FEMALE "
+                  },
+                  {
+                    "option": "OTHER "
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "YOUR PHONE NUMBER ",
+              "fieldType": "number",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "620161f6-0aea-4916-9339-83a596df5186",
+      "name": "On form submission",
+      "webhookId": "aa03aa4e-2f93-4a28-bffd-aee9089801be"
+    },
+    {
+      "parameters": {
+        "sendTo": "vaishnavnik100@gmail.com",
+        "subject": "never give up ",
+        "emailType": "text",
+        "message": "hi dont give up my brother you are doing great and a lot of things are waiting for you ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "ad75f54f-c801-4b43-aec0-10e806099126",
+      "name": "Send a message",
+      "webhookId": "cdcf443a-4a49-4883-ac16-434c4d865cb7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9WmFSGhN5kC1G1Ok",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1vEkUHgIA2VrZ0MfOzNCtS6hcfD2A0R8ft_eS5qfIv1Q",
+          "mode": "list",
+          "cachedResultName": "n8n sheets ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vEkUHgIA2VrZ0MfOzNCtS6hcfD2A0R8ft_eS5qfIv1Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vEkUHgIA2VrZ0MfOzNCtS6hcfD2A0R8ft_eS5qfIv1Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "formMode"
+          ],
+          "schema": [
+            {
+              "id": "NAME ",
+              "displayName": "NAME ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "NUMBER ",
+              "displayName": "NUMBER ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "GMAIIL",
+              "displayName": "GMAIIL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "submittedAt",
+              "displayName": "submittedAt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "formMode",
+              "displayName": "formMode",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "YOUR NAME ",
+              "displayName": "YOUR NAME ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "DATE OF BIRTH ",
+              "displayName": "DATE OF BIRTH ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "GMAIL ",
+              "displayName": "GMAIL ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SEX ",
+              "displayName": "SEX ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "YOUR PHONE NUMBER ",
+              "displayName": "YOUR PHONE NUMBER ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "ca47c02e-1876-444b-a409-56700b5d40cb",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "X8ajC4Z6981AuOm6",
+          "name": "Google Sheets account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ae6b1bc1-cbe0-42a9-b511-16ecd5232115",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7007fe11da506a1d15d386dbc42617e1e661fdb03e6f8fd5a0496dd55ca74e09"
+  },
+  "id": "U84s2L8GqmBe8JP6",
+  "tags": []
+}
