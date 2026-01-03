@@ -1,0 +1,1 @@
+i create a workflow that generate the leads and save the details of client and send them emails automatically through the platform named n8n i hope you liked it this is my first project in it i will work hard now  
